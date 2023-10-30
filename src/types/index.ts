@@ -46,3 +46,12 @@ export type INewUser = {
   username: string
   password: string
 }
+
+export type IContextType = {
+  user: IUser
+  isLoading: boolean
+  isAuthenticated: boolean
+  setUser: (user: IUser) => void
+  setIsAuthenticated: (isAuthenticated: boolean) => void
+  checkAuthUser: () => Promise<boolean>
+}
